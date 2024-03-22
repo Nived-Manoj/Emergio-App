@@ -649,8 +649,9 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ],
-        ), //first column
+        ),
       ),
+      //Sidebar Drawer
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
