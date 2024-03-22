@@ -24,10 +24,29 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            Container(
-                height: 500,
-                child: Image.asset("assett/images/gplay.jpg",
-                    fit: BoxFit.fitHeight)),
+            Stack(
+              children: [
+                Container(
+                    height: 500,
+                    child: Image.asset("assett/images/gplay.jpg",
+                        fit: BoxFit.fitHeight)),
+                Container(
+                  height: 30,
+                  width: 80,
+                  color: Colors.pinkAccent[200],
+                  child: Center(
+                    child: Text(
+                      "NEW",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
             SizedBox(
               height: 30,
             ),
