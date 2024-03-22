@@ -1,3 +1,6 @@
+import 'package:emergio_app/view/career.dart';
+import 'package:emergio_app/view/contact.dart';
+import 'package:emergio_app/view/courses.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,12 +18,31 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-                height: 500,
-                child: Image.asset(
-                  "assett/images/bg1.jpg",
-                  fit: BoxFit.fitHeight,
-                )),
+            Stack(
+              children: [
+                Container(
+                    height: 500,
+                    child: Image.asset(
+                      "assett/images/bg1.jpg",
+                      fit: BoxFit.fitHeight,
+                    )),
+                Column(
+                  children: [
+                    Text("Play, Learn, and Build Games",
+                        style: TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white)),
+                    Text("- All in One Place",
+                        style: TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.amberAccent)),
+                  ],
+                ),
+              ],
+            ),
+
             SizedBox(
               height: 40,
             ),
@@ -35,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                   child: Container(
                     height: 30,
                     width: 150,
-                    color: Colors.pinkAccent[200],
+                    color: Colors.pinkAccent[400],
                     child: Center(
                       child: InkWell(
                         onTap: () {},
@@ -78,7 +100,57 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            Image.asset("assett/images/g dev.jpg"),
+            Stack(
+              children: [
+                Container(
+                    height: 500,
+                    child: Image.asset("assett/images/g dev.jpg",
+                        fit: BoxFit.fitHeight)),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25, top: 25),
+                  child: Container(
+                    height: 30,
+                    width: 150,
+                    color: Colors.greenAccent[700],
+                    child: Center(
+                      child: InkWell(
+                        onTap: () {},
+                        child: Text(
+                          "ENQUIRE NOW",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 250, right: 9),
+                      child: Text("WANNA DEVELOP A \n GAME",
+                          style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 18, top: 34),
+                      child: Text(
+                          "Turn your game Ideas into reality! Join our game development courses and create captivating worlds",
+                          style: TextStyle(
+                              fontSize: 17,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+
             SizedBox(
               height: 30,
             ),
@@ -713,42 +785,57 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.person),
-              title: const Text(' My Profile '),
+              leading: Icon(Icons.home),
+              title: const Text(' Home'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ));
               },
             ),
             ListTile(
               leading: Icon(Icons.book),
-              title: const Text(' My Course '),
+              title: const Text(' Courses '),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Courses(),
+                    ));
               },
             ),
             ListTile(
               leading: Icon(Icons.workspace_premium),
-              title: const Text(' G '),
+              title: const Text(' Career '),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Career(),
+                    ));
               },
             ),
             ListTile(
-              leading: Icon(Icons.video_label),
-              title: const Text(' S '),
+              leading: Icon(Icons.phone),
+              title: const Text(' Contact '),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Contact(),
+                    ));
               },
             ),
-            ListTile(
-              leading: Icon(Icons.edit),
-              title: const Text(' e '),
-              onTap: () {
-                Navigator.pop(context);
-              },
+            SizedBox(
+              height: 390,
             ),
             ListTile(
-              leading: Icon(Icons.logout),
+              leading: Icon(
+                Icons.logout,
+                color: Colors.redAccent,
+              ),
               title: const Text('LogOut'),
               onTap: () {
                 Navigator.pop(context);
