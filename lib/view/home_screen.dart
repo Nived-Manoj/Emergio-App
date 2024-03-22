@@ -30,19 +30,47 @@ class HomeScreen extends StatelessWidget {
                     height: 500,
                     child: Image.asset("assett/images/gplay.jpg",
                         fit: BoxFit.fitHeight)),
-                Container(
-                  height: 30,
-                  width: 80,
-                  color: Colors.pinkAccent[200],
-                  child: Center(
-                    child: Text(
-                      "NEW",
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25, top: 25),
+                  child: Container(
+                    height: 30,
+                    width: 150,
+                    color: Colors.pinkAccent[200],
+                    child: Center(
+                      child: InkWell(
+                        onTap: () {},
+                        child: Text(
+                          "ENQUIRE NOW",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white),
+                        ),
+                      ),
                     ),
                   ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 250, right: 90),
+                      child: Text("WANNA PLAY A \n GAME",
+                          style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Text(
+                          "Ready for gaming thrills? Dive in now! Discover adventures,puzzles,and challenges awaiting your play.",
+                          style: TextStyle(
+                              fontSize: 17,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400)),
+                    ),
+                  ],
                 ),
               ],
             ),
