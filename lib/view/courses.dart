@@ -9,6 +9,7 @@ class Courses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.black,
@@ -23,6 +24,23 @@ class Courses extends StatelessWidget {
                         builder: (context) => HomeScreen(),
                       ));
                 }),
+          ],
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  height: 500,
+                  child: Image.asset(
+                    "assett/images/course.jpg",
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
