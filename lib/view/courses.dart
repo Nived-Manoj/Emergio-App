@@ -57,6 +57,7 @@ class Courses extends StatelessWidget {
                 ])
               ],
             ),
+            // courses
             SizedBox(
               height: 50,
             ),
@@ -84,6 +85,16 @@ class Courses extends StatelessWidget {
                         SizedBox(
                           height: 10,
                         ),
+                        //
+                        //
+                        //
+                        // Container(
+                        //   child: Lottie.asset('assett/animation/Animation.json',
+                        //       fit: BoxFit.fitWidth),
+                        // ),
+                        //
+                        //
+                        //
                         Padding(
                           padding: const EdgeInsets.only(
                             left: 5,
@@ -315,6 +326,7 @@ class Courses extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
+            //Details last container
             Container(
               color: Colors.black,
               child: Center(
@@ -380,7 +392,7 @@ class Courses extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 60,
+                      height: 30,
                     ),
                     Text(
                       "QUICK LINKS",
@@ -392,45 +404,70 @@ class Courses extends StatelessWidget {
                     SizedBox(
                       height: 30,
                     ),
-                    Text(
-                      "Home ",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomeScreen(),
+                              ));
+                        },
+                        child: Text(
+                          "Home ",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        )),
+
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Courses(),
+                              ));
+                        },
+                        child: Text(
+                          "Courses ",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        )),
+
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Career(),
+                              ));
+                        },
+                        child: Text(
+                          "Career ",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        )),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Contact(),
+                              ));
+                        },
+                        child: Text(
+                          "Contact ",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        )),
                     SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "Courses",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "Career ",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "Contact",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 60,
+                      height: 30,
                     ),
                     Text(
                       "CONTACT",

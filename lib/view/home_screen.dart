@@ -23,23 +23,35 @@ class HomeScreen extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                    height: 500,
+                    height: 800,
                     child: Image.asset(
                       "assett/images/bg1.jpg",
                       fit: BoxFit.fitHeight,
                     )),
                 Column(
                   children: [
-                    Text("Play, Learn, and Build Games",
-                        style: TextStyle(
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white)),
-                    Text("- All in One Place",
-                        style: TextStyle(
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.amberAccent)),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 80, top: 260),
+                      child: Text("Play, Learn, \nand Build \nGames",
+                          style: TextStyle(
+                              fontSize: 50,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 110),
+                      child: Text("- All in One \n Place",
+                          style: TextStyle(
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.orangeAccent[400])),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Text(
+                          "Play your favorite titles, discover new ones, learn the craft of game development,and build your own games—all conveniently accessible under one digital roof.",
+                          style: TextStyle(fontSize: 17, color: Colors.white)),
+                    ),
                   ],
                 ),
               ],
@@ -196,7 +208,26 @@ class HomeScreen extends StatelessWidget {
                         horizontal: 10, vertical: 30),
                     child: Column(
                       children: [
-                        Image.asset("assett/images/hrm.jpg"),
+                        Stack(
+                          children: [
+                            Image.asset("assett/images/hrm.jpg"),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 10),
+                              child: Container(
+                                height: 30,
+                                width: 110,
+                                color: Colors.pinkAccent[400],
+                                child: Center(
+                                    child: Text(
+                                  "MANAGEMENT",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600),
+                                )),
+                              ),
+                            )
+                          ],
+                        ),
                         SizedBox(
                           height: 10,
                         ),
@@ -238,7 +269,24 @@ class HomeScreen extends StatelessWidget {
                         horizontal: 10, vertical: 30),
                     child: Column(
                       children: [
-                        Image.asset("assett/images/Uiux.jpg"),
+                        Stack(children: [
+                          Image.asset("assett/images/Uiux.jpg"),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8, top: 8),
+                            child: Container(
+                              height: 30,
+                              width: 100,
+                              color: Colors.pinkAccent[400],
+                              child: Center(
+                                  child: Text(
+                                "DESIGN",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600),
+                              )),
+                            ),
+                          )
+                        ]),
                         SizedBox(
                           height: 10,
                         ),
@@ -282,7 +330,23 @@ class HomeScreen extends StatelessWidget {
                         horizontal: 10, vertical: 30),
                     child: Column(
                       children: [
-                        Image.asset("assett/images/Dm.jpg"),
+                        Stack(
+                          children: [
+                            Image.asset("assett/images/Dm.jpg"),
+                            Container(
+                              height: 30,
+                              width: 100,
+                              color: Colors.pinkAccent[400],
+                              child: Center(
+                                  child: Text(
+                                "MARKETING",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600),
+                              )),
+                            )
+                          ],
+                        ),
                         Divider(thickness: 2),
                         SizedBox(
                           height: 10,
@@ -735,7 +799,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 60,
+                      height: 50,
                     ),
                     Text(
                       "QUICK LINKS",
@@ -747,45 +811,70 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(
                       height: 30,
                     ),
-                    Text(
-                      "Home ",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomeScreen(),
+                              ));
+                        },
+                        child: Text(
+                          "Home ",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        )),
+
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Courses(),
+                              ));
+                        },
+                        child: Text(
+                          "Courses ",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        )),
+
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Career(),
+                              ));
+                        },
+                        child: Text(
+                          "Career ",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        )),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Contact(),
+                              ));
+                        },
+                        child: Text(
+                          "Contact ",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        )),
                     SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "Courses",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "Career ",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "Contact",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 60,
+                      height: 30,
                     ),
                     Text(
                       "CONTACT",
