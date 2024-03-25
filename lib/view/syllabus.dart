@@ -30,78 +30,109 @@ class Syllabus extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
+      body: Stack(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Text(
-              "WE HELP TRANSFORM STUDENTS INTO CAREERS WHERE THEY CAN EARN BETTER",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-            ),
+          Container(
+              height: 900,
+              child: Image.asset(
+                "assett/images/syllabus.png",
+                fit: BoxFit.fill,
+              )),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Text(
+                  "WE HELP TRANSFORM STUDENTS INTO CAREERS WHERE THEY CAN EARN BETTER",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  "Emergio is a provider of skill development courses in IT, Designing, Management, and Accounting.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                "SYLLABUS",
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text(
+                  "UI/UX",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text(
+                  "Graphic Design",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text(
+                  "Human Resource Management ",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text(
+                  "Python",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text(
+                  "Game Art",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text(
+                  "Game Development",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text(
+                  "Digital Marketing",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                onTap: () {},
+              )
+            ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              "Emergio is a provider of skill development courses in IT, Designing, Management, and Accounting.",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "SYLLABUS",
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "UI/UX",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Graphic Design",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Human Resource Management ",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Python",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Game Art",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Game Development",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Digital Marketing",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          )
         ],
       ),
       endDrawer: Drawer(
@@ -170,6 +201,17 @@ class Syllabus extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: Icon(Icons.notes),
+              title: const Text('Syllabus'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Syllabus(),
+                    ));
+              },
+            ),
+            ListTile(
               leading: Icon(Icons.payment),
               title: const Text('Fees/Payments'),
               onTap: () {
@@ -192,7 +234,7 @@ class Syllabus extends StatelessWidget {
               },
             ),
             SizedBox(
-              height: 280,
+              height: 220,
             ),
             ListTile(
               leading: Icon(

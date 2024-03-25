@@ -3,6 +3,7 @@ import 'package:emergio_app/view/contact.dart';
 import 'package:emergio_app/view/courses.dart';
 import 'package:emergio_app/view/home_screen.dart';
 import 'package:emergio_app/view/login.dart';
+import 'package:emergio_app/view/syllabus.dart';
 import 'package:flutter/material.dart';
 
 class Payments extends StatelessWidget {
@@ -111,6 +112,17 @@ class Payments extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: Icon(Icons.notes),
+              title: const Text('Syllabus'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Syllabus(),
+                    ));
+              },
+            ),
+            ListTile(
               leading: Icon(Icons.payment),
               title: const Text('Fees/Payments'),
               onTap: () {
@@ -133,7 +145,7 @@ class Payments extends StatelessWidget {
               },
             ),
             SizedBox(
-              height: 280,
+              height: 220,
             ),
             ListTile(
               leading: Icon(
