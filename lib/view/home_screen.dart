@@ -438,173 +438,233 @@ class HomeScreen extends StatelessWidget {
               height: 60,
             ),
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                  height: 470,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 30),
-                    child: Column(
-                      children: [
-                        Image.asset("assett/images/G devlp.jpg"),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text("Game Development",
-                            style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black)),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            left: 5,
-                          ),
-                          child: Text(
-                            "Craft gaming worlds from imagination to reality. Our courses guide you through  every step of game dvelopment, unlocking the skills to bring your ideas to life.",
-                            style: TextStyle(
-                              fontSize: 16,
+            Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      height: 470,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 30),
+                        child: Column(
+                          children: [
+                            Image.asset("assett/images/G devlp.jpg"),
+                            SizedBox(
+                              height: 20,
                             ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  )),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                  height: 450,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 30),
-                    child: Column(
-                      children: [
-                        Image.asset("assett/images/python.jpg"),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text("Python",
-                            style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black)),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            left: 5,
-                          ),
-                          child: Text(
-                            "The language of possibilites. Join our courses to explore its simplicity and versatility in web development, AI,data analysis,and automation.",
-                            style: TextStyle(
-                              fontSize: 16,
+                            Text("Game Development",
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black)),
+                            SizedBox(
+                              height: 10,
                             ),
-                          ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 5,
+                              ),
+                              child: Text(
+                                "Craft gaming worlds from imagination to reality. Our courses guide you through  every step of game dvelopment, unlocking the skills to bring your ideas to life.",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
+                      )),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25, top: 10),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.orangeAccent[400],
+                    child: Text(
+                      "8.9",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
-                  )),
+                  ),
+                ),
+              ],
             ),
 
             SizedBox(
               height: 30,
             ),
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                  height: 595,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 30),
-                    child: Column(
-                      children: [
-                        Image.asset("assett/images/game.jpg"),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text("Game Art",
-                            style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black)),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            left: 5,
-                          ),
-                          child: Text(
-                            "Where imagination takes from. Enroll in our courses to master visual storytelling, character design, and worl creation, shaping the essence of gaming experiences.",
-                            style: TextStyle(
-                              fontSize: 16,
+            Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      height: 450,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 30),
+                        child: Column(
+                          children: [
+                            Image.asset("assett/images/python.jpg"),
+                            SizedBox(
+                              height: 20,
                             ),
-                          ),
+                            Text("Python",
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black)),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 5,
+                              ),
+                              child: Text(
+                                "The language of possibilites. Join our courses to explore its simplicity and versatility in web development, AI,data analysis,and automation.",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
+                      )),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25, top: 10),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.orangeAccent[400],
+                    child: Text(
+                      "9.5",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
-                  )),
+                  ),
+                ),
+              ],
+            ),
+
+            SizedBox(
+              height: 30,
+            ),
+
+            Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      height: 595,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 30),
+                        child: Column(
+                          children: [
+                            Image.asset("assett/images/game.jpg"),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text("Game Art",
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black)),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 5,
+                              ),
+                              child: Text(
+                                "Where imagination takes from. Enroll in our courses to master visual storytelling, character design, and worl creation, shaping the essence of gaming experiences.",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25, top: 10),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.orangeAccent[400],
+                    child: Text(
+                      "9.4",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
             ),
 
             SizedBox(height: 30),
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                  height: 435,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 30),
-                    child: Column(
-                      children: [
-                        Image.asset("assett/images/Uiux.jpg"),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text("UI/UX",
-                            style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black)),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            left: 5,
-                          ),
-                          child: Text(
-                            "Designing user-friendly digital journeys. Join our courses to master interface design and user experience strategies, creating engaging digital landscapes.",
-                            style: TextStyle(
-                              fontSize: 16,
+            Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      height: 420,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 30),
+                        child: Column(
+                          children: [
+                            Image.asset("assett/images/Uiux.jpg"),
+                            SizedBox(
+                              height: 10,
                             ),
-                          ),
+                            Text("UI/UX",
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black)),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 5,
+                              ),
+                              child: Text(
+                                "Designing user-friendly digital journeys. Join our courses to master interface design and user experience strategies, creating engaging digital landscapes.",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
+                      )),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25, top: 10),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.orangeAccent[400],
+                    child: Text(
+                      "9.3",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
-                  )),
+                  ),
+                ),
+              ],
             ),
 
             SizedBox(

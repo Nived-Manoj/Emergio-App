@@ -3,10 +3,11 @@ import 'package:emergio_app/view/contact.dart';
 import 'package:emergio_app/view/courses.dart';
 import 'package:emergio_app/view/home_screen.dart';
 import 'package:emergio_app/view/login.dart';
+import 'package:emergio_app/view/payments.dart';
 import 'package:flutter/material.dart';
 
-class Payments extends StatelessWidget {
-  const Payments({super.key});
+class Syllabus extends StatelessWidget {
+  const Syllabus({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,19 +33,77 @@ class Payments extends StatelessWidget {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 15, left: 15),
+            padding: const EdgeInsets.all(10),
             child: Text(
-              "Scan this QR Code for payments",
-              style: TextStyle(fontSize: 25, color: Colors.black),
+              "WE HELP TRANSFORM STUDENTS INTO CAREERS WHERE THEY CAN EARN BETTER",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Image.asset("assett/images/fees.png"),
+            padding: const EdgeInsets.all(10.0),
+            child: Text(
+              "Emergio is a provider of skill development courses in IT, Designing, Management, and Accounting.",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "SYLLABUS",
+            style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "UI/UX",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Graphic Design",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Human Resource Management ",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Python",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Game Art",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Game Development",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Digital Marketing",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
           )
         ],
       ),
-      //Sidebar Drawer
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
