@@ -5,7 +5,6 @@ import 'package:emergio_app/view/login.dart';
 import 'package:emergio_app/view/payments.dart';
 import 'package:emergio_app/view/syllabus.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 
 class Courses extends StatelessWidget {
   const Courses({super.key});
