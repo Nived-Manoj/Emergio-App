@@ -322,7 +322,15 @@ class Courses extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            ElevatedButton(onPressed: () {}, child: Text("Download Syllabus")),
+            ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStatePropertyAll(Colors.orangeAccent[700])),
+                onPressed: () {},
+                child: Text(
+                  "Download Syllabus",
+                  style: TextStyle(color: Colors.white),
+                )),
             SizedBox(
               height: 40,
             ),

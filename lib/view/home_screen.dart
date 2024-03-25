@@ -2,7 +2,9 @@ import 'package:emergio_app/view/career.dart';
 import 'package:emergio_app/view/contact.dart';
 import 'package:emergio_app/view/courses.dart';
 import 'package:emergio_app/view/login.dart';
+import 'package:emergio_app/view/payments.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -982,10 +984,9 @@ class HomeScreen extends StatelessWidget {
                           onTap: () {},
                         ),
                         InkWell(
-                          child: Image.asset("assett/icons/whatsapp.png",
-                              scale: 13, color: Colors.white70),
-                          onTap: () {},
-                        ),
+                            child: Image.asset("assett/icons/whatsapp.png",
+                                scale: 13, color: Colors.white70),
+                            onTap: () => launch('https://wa.me/918891516767')),
                         SizedBox(
                           width: 20,
                         ),
@@ -1071,11 +1072,11 @@ class HomeScreen extends StatelessWidget {
               leading: Icon(Icons.payment),
               title: const Text('Fees/Payments'),
               onTap: () {
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //       builder: (context) => ,
-                //     ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Payments(),
+                    ));
               },
             ),
             ListTile(
