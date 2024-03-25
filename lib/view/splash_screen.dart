@@ -31,15 +31,21 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.black,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              child: Image.asset("assett/icons/logo.png"),
+            Padding(
+              padding: const EdgeInsets.only(top: 380),
+              child: Image.asset(
+                "assett/icons/logo.png",
+              ),
             ),
             SizedBox(
               height: 80,
             ),
-            CircularProgressIndicator(),
+            Padding(
+              padding: const EdgeInsets.only(top: 200),
+              child: Lottie.asset("assett/animation/Animation1 (2).json",
+                  height: 150),
+            ),
           ],
         ),
       ),
