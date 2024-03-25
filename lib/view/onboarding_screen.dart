@@ -12,13 +12,13 @@ class Onboarding extends StatelessWidget {
           Container(
               height: 900,
               child: Image.asset(
-                "assett/images/bg1.jpg",
+                "assett/images/onboard.jpeg",
                 fit: BoxFit.fitHeight,
               )),
           Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 80, top: 260),
+                padding: const EdgeInsets.only(right: 80, top: 320),
                 child: Text("Play, Learn, \nand Build \nGames",
                     style: TextStyle(
                         fontSize: 50,
@@ -40,7 +40,7 @@ class Onboarding extends StatelessWidget {
                     style: TextStyle(fontSize: 17, color: Colors.white)),
               ),
               SizedBox(
-                height: 90,
+                height: 50,
               ),
               ElevatedButton(
                   style: ButtonStyle(

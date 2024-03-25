@@ -1,6 +1,7 @@
 import 'package:emergio_app/view/career.dart';
 import 'package:emergio_app/view/contact.dart';
 import 'package:emergio_app/view/courses.dart';
+import 'package:emergio_app/view/login.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -1081,11 +1082,11 @@ class HomeScreen extends StatelessWidget {
               leading: Icon(Icons.login),
               title: const Text('Login/Register'),
               onTap: () {
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //       builder: (context) => ,
-                //     ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Login(),
+                    ));
               },
             ),
             SizedBox(
