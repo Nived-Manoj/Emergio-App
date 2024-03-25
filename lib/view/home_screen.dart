@@ -1009,9 +1009,17 @@ class HomeScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.black87,
               ),
-              child: Text(
-                'Navigation Drawer',
-                style: TextStyle(fontSize: 20, color: Colors.white),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  CircleAvatar(
+                    radius: 50,
+                  ),
+                  Text(
+                    'Emergio Games',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ],
               ),
             ),
             ListTile(
@@ -1058,8 +1066,30 @@ class HomeScreen extends StatelessWidget {
                     ));
               },
             ),
+            ListTile(
+              leading: Icon(Icons.payment),
+              title: const Text('Fees/Payments'),
+              onTap: () {
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //       builder: (context) => ,
+                //     ));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.login),
+              title: const Text('Login/Register'),
+              onTap: () {
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //       builder: (context) => ,
+                //     ));
+              },
+            ),
             SizedBox(
-              height: 390,
+              height: 280,
             ),
             ListTile(
               leading: Icon(

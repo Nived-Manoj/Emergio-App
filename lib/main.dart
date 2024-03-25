@@ -1,4 +1,5 @@
 import 'package:emergio_app/view/home_screen.dart';
+import 'package:emergio_app/view/onboarding_screen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: HomeScreen(),
+        body: Onboarding(),
       ),
     );
   }
