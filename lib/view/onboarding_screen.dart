@@ -54,9 +54,52 @@ class Onboarding extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 SizedBox(
-                  height: 480,
+                  height: 280,
                 ),
-                Text('Description Text 1'),
+                Padding(
+                  padding: const EdgeInsets.only(right: 30.0),
+                  child: Text("Play, Learn, \nand Build \nGames",
+                      style: TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    right: 80,
+                  ),
+                  child: Text("- All in One \n  Place",
+                      style: TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.orangeAccent[400])),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 330,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 69),
+                  child: Text("Dive into the",
+                      style: TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 50),
+                  child: Text("Ultimate Gaming \nUniverse",
+                      style: TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.orangeAccent[400])),
+                ),
               ],
             ),
           ),
@@ -65,20 +108,21 @@ class Onboarding extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 SizedBox(
-                  height: 480,
+                  height: 390,
                 ),
-                Text('Description Text 3'),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 40),
-            child: Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 480,
+                Text("Craft Your Own",
+                    style: TextStyle(
+                        fontSize: 50,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white)),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, right: 80),
+                  child: Text("Adventure",
+                      style: TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.orangeAccent[400])),
                 ),
-                Text('Description Text 2'),
               ],
             ),
           ),

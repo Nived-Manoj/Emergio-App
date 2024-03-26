@@ -477,7 +477,13 @@ class Contact extends StatelessWidget {
               ),
               title: const Text('LogOut'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Login(),
+                  ),
+                  (Route route) => false,
+                );
               },
             ),
           ],
