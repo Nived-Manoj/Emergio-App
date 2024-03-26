@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:emergio_app/view/career.dart';
 import 'package:emergio_app/view/contact.dart';
 import 'package:emergio_app/view/courses.dart';
@@ -24,41 +25,102 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Stack(
-              children: [
-                Container(
-                    height: 800,
-                    child: Image.asset(
-                      "assett/images/bg1.jpg",
-                      fit: BoxFit.fitHeight,
-                    )),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 80, top: 260),
-                      child: Text("Play, Learn, \nand Build \nGames",
-                          style: TextStyle(
-                              fontSize: 50,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white)),
+            //corousal slider
+            Builder(
+              builder: (context) {
+                final double height = MediaQuery.of(context).size.height;
+                return CarouselSlider(
+                  options: CarouselOptions(
+                    height: height,
+                    viewportFraction: 1.0,
+                    enlargeCenterPage: false,
+                    autoPlay: true,
+                    enableInfiniteScroll: false,
+                  ),
+                  items: [
+                    Stack(
+                      children: [
+                        Container(
+                            height: 800,
+                            child: Image.asset(
+                              "assett/images/bg1.jpg",
+                              fit: BoxFit.fitHeight,
+                            )),
+                        Column(
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(right: 80, top: 260),
+                              child: Text("Play, Learn, \nand Build \nGames",
+                                  style: TextStyle(
+                                      fontSize: 50,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white)),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 110),
+                              child: Text("- All in One \n Place",
+                                  style: TextStyle(
+                                      fontSize: 50,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.orangeAccent[400])),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20),
+                              child: Text(
+                                  "Play your favorite titles, discover new ones, learn the craft of game development,and build your own games—all conveniently accessible under one digital roof.",
+                                  style: TextStyle(
+                                      fontSize: 17, color: Colors.white)),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 110),
-                      child: Text("- All in One \n Place",
-                          style: TextStyle(
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.orangeAccent[400])),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Text(
-                          "Play your favorite titles, discover new ones, learn the craft of game development,and build your own games—all conveniently accessible under one digital roof.",
-                          style: TextStyle(fontSize: 17, color: Colors.white)),
+                    ////////////////////////////////////////////////////////////////
+                    Stack(
+                      children: [
+                        Container(
+                            height: 800,
+                            child: Image.asset(
+                              "assett/images/slider-1.jpg",
+                              fit: BoxFit.fitHeight,
+                            )),
+                        Column(
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(right: 80, top: 320),
+                              child: Text("Dive into the",
+                                  style: TextStyle(
+                                      fontSize: 50,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white)),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 30, right: 50),
+                              child: Text("Ultimate Gaming \nUniverse",
+                                  style: TextStyle(
+                                      fontSize: 50,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.orangeAccent[400])),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20),
+                              child: Text(
+                                  "Explore a universe filled with immersive worlds, gripping stories, and limitless possibilities. Engage, compete, and collaborate in a realm made for gamers.",
+                                  style: TextStyle(
+                                      fontSize: 17, color: Colors.white)),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ],
-                ),
-              ],
+                );
+              },
             ),
 
             SizedBox(
@@ -402,10 +464,49 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Image.asset(
-                  "assett/images/lekshmi.png",
-                  scale: 1,
-                )
+                /////
+                Builder(builder: (context) {
+                  return CarouselSlider(
+                    options: CarouselOptions(
+                      height: 206,
+                      viewportFraction: 1.0,
+                      enlargeCenterPage: false,
+                      autoPlay: true,
+                      enableInfiniteScroll: false,
+                    ),
+                    items: [
+                      Image.asset(
+                        "assett/images/lekshmi.png",
+                        scale: 1,
+                      ),
+                      Image.asset(
+                        "assett/images/vaishnavi.png",
+                        scale: 1,
+                      ),
+                      Image.asset(
+                        "assett/images/midhila.png",
+                        scale: 1,
+                      ),
+                      Image.asset(
+                        "assett/images/rahul.png",
+                        scale: 1,
+                      ),
+                      Image.asset(
+                        "assett/images/sreehari.png",
+                        scale: 1,
+                      ),
+                      Image.asset(
+                        "assett/images/vishwas.png",
+                        scale: 1,
+                      ),
+                      Image.asset(
+                        "assett/images/manu.png",
+                        scale: 1,
+                      )
+                    ],
+                  );
+                }),
+                ////
               ],
             ),
             SizedBox(height: 30),
