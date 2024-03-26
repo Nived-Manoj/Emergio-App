@@ -13,6 +13,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future<void> _launchUrl(String url) async {
+      final Uri uri = Uri.parse(url);
+
+      if (!await launchUrl(uri)) {
+        throw 'Could not launch $uri';
+      }
+    }
+
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
@@ -140,7 +148,8 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.pinkAccent[400],
                     child: Center(
                       child: InkWell(
-                        onTap: () {},
+                          onTap: () =>
+                                _launchUrl('https://wa.me/918891516767'),
                         child: Text(
                           "ENQUIRE NOW",
                           style: TextStyle(
@@ -193,7 +202,8 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.greenAccent[700],
                     child: Center(
                       child: InkWell(
-                        onTap: () {},
+                          onTap: () =>
+                                _launchUrl('https://wa.me/918891516767'),
                         child: Text(
                           "ENQUIRE NOW",
                           style: TextStyle(
@@ -1110,11 +1120,14 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(
                       height: 8,
                     ),
-                    Text("emergiotech.com",
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                        )),
+                    InkWell(
+                      child: Text("emergiotech.com",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          )),
+                          onTap: ,
+                    ),
                     SizedBox(
                       height: 20,
                     ),
@@ -1126,29 +1139,31 @@ class HomeScreen extends StatelessWidget {
                           width: 20,
                         ),
                         InkWell(
-                          child: Image.asset("assett/icons/facebook.png",
-                              scale: 13, color: Colors.white70),
-                          onTap: () {},
-                        ),
+                            child: Image.asset("assett/icons/facebook.png",
+                                scale: 13, color: Colors.white70),
+                            onTap: () => _launchUrl(
+                                'https://www.facebook.com/emergiogames?mibextid=ZbWKwL')),
                         InkWell(
                           child: Image.asset("assett/icons/instagram.png",
                               scale: 13, color: Colors.white70),
-                          onTap: () {},
+                          onTap: () => _launchUrl(
+                              'https://www.instagram.com/emergio_games?igsh=MW1sNGJkaDB4b3Rt'),
                         ),
                         InkWell(
-                          child: Image.asset("assett/icons/social.png",
-                              scale: 13, color: Colors.white70),
-                          onTap: () {},
-                        ),
+                            child: Image.asset("assett/icons/social.png",
+                                scale: 13, color: Colors.white70),
+                            onTap: () => _launchUrl(
+                                'https://www.google.com/search?q=emergio+games+pvt+ltd+kochi&rlz=1C1ZKTG_enIN904IN904&oq=e&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MggIARBFGCcYOzISCAIQLhgnGK8BGMcBGIAEGIoFMgYIAxBFGDsyBggEEEUYQDIGCAUQRRg5Mg0IBhAAGIMBGLEDGIAEMg0IBxAAGIMBGLEDGIAE0gEJNzI5N2owajE1qAIAsAIA&sourceid=chrome&ie=UTF-8#rlimm=12764878485428070386&scso=_WuxdZd7TOLn5seMP9e-kwAU_9:34.400001525878906')),
                         InkWell(
-                          child: Image.asset("assett/icons/linkedin.png",
-                              scale: 13, color: Colors.white70),
-                          onTap: () {},
-                        ),
+                            child: Image.asset("assett/icons/linkedin.png",
+                                scale: 13, color: Colors.white70),
+                            onTap: () => _launchUrl(
+                                'https://www.linkedin.com/company/emergiogames/')),
                         InkWell(
                             child: Image.asset("assett/icons/whatsapp.png",
                                 scale: 13, color: Colors.white70),
-                            onTap: () => launch('https://wa.me/918891516767')),
+                            onTap: () =>
+                                _launchUrl('https://wa.me/918891516767')),
                         SizedBox(
                           width: 20,
                         ),
@@ -1273,7 +1288,13 @@ class HomeScreen extends StatelessWidget {
               ),
               title: const Text('LogOut'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Login(),
+                  ),
+                  (Route route) => false,
+                );
               },
             ),
           ],

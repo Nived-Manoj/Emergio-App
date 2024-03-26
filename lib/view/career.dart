@@ -563,24 +563,280 @@ class Career extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 10),
+                  padding: const EdgeInsets.only(left: 10, bottom: 40),
                   child: CircleAvatar(
-                    radius: 40,
+                    radius: 50,
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),
                   child: Column(
                     children: [
-                      Text("Benin P John"),
-                      Text("Game Development"),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 140),
+                        child: Text(
+                          "Benin P John",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 22,
+                              color: Colors.deepOrangeAccent[200]),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 110.0),
+                        child: Text(
+                          "Game Development",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                              color: Colors.pinkAccent[200]),
+                        ),
+                      ),
                       Text(
-                          "Our game development tutors are industry \nveterans, passionate about gaming and \nequipped with vast experience. They provide \npersonalized guidance, empowering \nyou to master game creation from\n coding to design.")
+                        "Our game development tutors are \nindustry veterans, passionate about \ngaming and equipped with vast \nexperience. They provide personalized \nguidance, empowering you to master \ngame creation from coding to design.",
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, bottom: 40),
+                  child: CircleAvatar(
+                    radius: 50,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 140),
+                        child: Text(
+                          "Abdul Basith",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 22,
+                              color: Colors.deepOrangeAccent[200]),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 125.0),
+                        child: Text(
+                          "Digital Marketing",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                              color: Colors.pinkAccent[200]),
+                        ),
+                      ),
+                      Text(
+                        "Our game development tutors are \nindustry veterans, passionate about \ngaming and equipped with vast \nexperience. They provide personalized \nguidance, empowering you to master \ngame creation from coding to design.",
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, bottom: 40),
+                  child: CircleAvatar(
+                    radius: 50,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 140),
+                        child: Text(
+                          "Abdul Basith",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 22,
+                              color: Colors.deepOrangeAccent[200]),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 125.0),
+                        child: Text(
+                          "Digital Marketing",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                              color: Colors.pinkAccent[200]),
+                        ),
+                      ),
+                      Text(
+                        "Our game development tutors are \nindustry veterans, passionate about \ngaming and equipped with vast \nexperience. They provide personalized \nguidance, empowering you to master \ngame creation from coding to design.",
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, bottom: 40),
+                  child: CircleAvatar(
+                    radius: 50,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 140),
+                        child: Text(
+                          "Abdul Basith",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 22,
+                              color: Colors.deepOrangeAccent[200]),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 125.0),
+                        child: Text(
+                          "Digital Marketing",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                              color: Colors.pinkAccent[200]),
+                        ),
+                      ),
+                      Text(
+                        "Our game development tutors are \nindustry veterans, passionate about \ngaming and equipped with vast \nexperience. They provide personalized \nguidance, empowering you to master \ngame creation from coding to design.",
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, bottom: 40),
+                  child: CircleAvatar(
+                    radius: 50,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 140),
+                        child: Text(
+                          "Abdul Basith",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 22,
+                              color: Colors.deepOrangeAccent[200]),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 125.0),
+                        child: Text(
+                          "Digital Marketing",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                              color: Colors.pinkAccent[200]),
+                        ),
+                      ),
+                      Text(
+                        "Our game development tutors are \nindustry veterans, passionate about \ngaming and equipped with vast \nexperience. They provide personalized \nguidance, empowering you to master \ngame creation from coding to design.",
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, bottom: 40),
+                  child: CircleAvatar(
+                    radius: 50,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 140),
+                        child: Text(
+                          "nisha chandran",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 22,
+                              color: Colors.deepOrangeAccent[200]),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 125.0),
+                        child: Text(
+                          "Digital Marketing",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                              color: Colors.pinkAccent[200]),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 40.0),
+                        child: Text(
+                          "Our game development tutors are \nindustry veterans, passionate about \ngaming and equipped with vast \nexperience. They provide personalized\nguidance, empowering you to master\ngame creation from coding to \ndesign.",
+                          style: TextStyle(
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+
             //last container
             SizedBox(
               height: 40,
