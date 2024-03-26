@@ -5,12 +5,21 @@ import 'package:emergio_app/view/login.dart';
 import 'package:emergio_app/view/payments.dart';
 import 'package:emergio_app/view/syllabus.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Courses extends StatelessWidget {
   const Courses({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Future<void> _launchUrl(String url) async {
+      final Uri uri = Uri.parse(url);
+
+      if (!await launchUrl(uri)) {
+        throw 'Could not launch $uri';
+      }
+    }
+
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
@@ -595,32 +604,47 @@ class Courses extends StatelessWidget {
                     SizedBox(
                       height: 30,
                     ),
-                    Text(
-                      "hr@emergiotech.com",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
+                    InkWell(
+                      child: Text(
+                        "hr@emergiotech.com",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
+                      onTap: () {
+                        _launchUrl("mailto:hr@emergiotech.com");
+                      },
                     ),
                     SizedBox(
                       height: 30,
                     ),
-                    Text(
-                      "+91 88915 16767",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
+                    InkWell(
+                      child: Text(
+                        "+91 88915 16767",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
+                      onTap: () {
+                        _launchUrl("tel:+91 8891516767");
+                      },
                     ),
                     SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      "+91 75940 88816",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
+                    InkWell(
+                      child: Text(
+                        "+91 75940 88816",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
+                      onTap: () {
+                        _launchUrl("tel:+91 7594088816");
+                      },
                     ),
                     SizedBox(
                       height: 30,
@@ -641,11 +665,15 @@ class Courses extends StatelessWidget {
                     SizedBox(
                       height: 8,
                     ),
-                    Text("emergiotech.com",
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                        )),
+                    InkWell(
+                      child: Text("emergiotech.com",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          )),
+                      onTap: () =>
+                          _launchUrl('https://www.emergiogames.com/index/'),
+                    ),
                     SizedBox(
                       height: 20,
                     ),
@@ -657,30 +685,31 @@ class Courses extends StatelessWidget {
                           width: 20,
                         ),
                         InkWell(
-                          child: Image.asset("assett/icons/facebook.png",
-                              scale: 13, color: Colors.white70),
-                          onTap: () {},
-                        ),
+                            child: Image.asset("assett/icons/facebook.png",
+                                scale: 13, color: Colors.white70),
+                            onTap: () => _launchUrl(
+                                'https://www.facebook.com/emergiogames?mibextid=ZbWKwL')),
                         InkWell(
                           child: Image.asset("assett/icons/instagram.png",
                               scale: 13, color: Colors.white70),
-                          onTap: () {},
+                          onTap: () => _launchUrl(
+                              'https://www.instagram.com/emergio_games?igsh=MW1sNGJkaDB4b3Rt'),
                         ),
                         InkWell(
-                          child: Image.asset("assett/icons/social.png",
-                              scale: 13, color: Colors.white70),
-                          onTap: () {},
-                        ),
+                            child: Image.asset("assett/icons/social.png",
+                                scale: 13, color: Colors.white70),
+                            onTap: () => _launchUrl(
+                                'https://www.google.com/search?q=emergio+games+pvt+ltd+kochi&rlz=1C1ZKTG_enIN904IN904&oq=e&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MggIARBFGCcYOzISCAIQLhgnGK8BGMcBGIAEGIoFMgYIAxBFGDsyBggEEEUYQDIGCAUQRRg5Mg0IBhAAGIMBGLEDGIAEMg0IBxAAGIMBGLEDGIAE0gEJNzI5N2owajE1qAIAsAIA&sourceid=chrome&ie=UTF-8#rlimm=12764878485428070386&scso=_WuxdZd7TOLn5seMP9e-kwAU_9:34.400001525878906')),
                         InkWell(
-                          child: Image.asset("assett/icons/linkedin.png",
-                              scale: 13, color: Colors.white70),
-                          onTap: () {},
-                        ),
+                            child: Image.asset("assett/icons/linkedin.png",
+                                scale: 13, color: Colors.white70),
+                            onTap: () => _launchUrl(
+                                'https://www.linkedin.com/company/emergiogames/')),
                         InkWell(
-                          child: Image.asset("assett/icons/whatsapp.png",
-                              scale: 13, color: Colors.white70),
-                          onTap: () {},
-                        ),
+                            child: Image.asset("assett/icons/whatsapp.png",
+                                scale: 13, color: Colors.white70),
+                            onTap: () =>
+                                _launchUrl('https://wa.me/918891516767')),
                         SizedBox(
                           width: 20,
                         ),
