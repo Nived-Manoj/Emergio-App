@@ -546,7 +546,41 @@ class Career extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20))),
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
 
+            Padding(
+              padding: const EdgeInsets.only(right: 260),
+              child: Text(
+                "Our Tutors",
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: CircleAvatar(
+                    radius: 40,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Column(
+                    children: [
+                      Text("Benin P John"),
+                      Text("Game Development"),
+                      Text(
+                          "Our game development tutors are industry \nveterans, passionate about gaming and \nequipped with vast experience. They provide \npersonalized guidance, empowering \nyou to master game creation from\n coding to design.")
+                    ],
+                  ),
+                ),
+              ],
+            ),
             //last container
             SizedBox(
               height: 40,

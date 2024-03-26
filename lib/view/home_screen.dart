@@ -502,7 +502,7 @@ class HomeScreen extends StatelessWidget {
                       Image.asset(
                         "assett/images/manu.png",
                         scale: 1,
-                      )
+                      ),
                     ],
                   );
                 }),
