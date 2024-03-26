@@ -148,8 +148,7 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.pinkAccent[400],
                     child: Center(
                       child: InkWell(
-                          onTap: () =>
-                                _launchUrl('https://wa.me/918891516767'),
+                        onTap: () => _launchUrl('https://wa.me/918891516767'),
                         child: Text(
                           "ENQUIRE NOW",
                           style: TextStyle(
@@ -202,8 +201,7 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.greenAccent[700],
                     child: Center(
                       child: InkWell(
-                          onTap: () =>
-                                _launchUrl('https://wa.me/918891516767'),
+                        onTap: () => _launchUrl('https://wa.me/918891516767'),
                         child: Text(
                           "ENQUIRE NOW",
                           style: TextStyle(
@@ -1074,32 +1072,47 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(
                       height: 30,
                     ),
-                    Text(
-                      "hr@emergiotech.com",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
+                    InkWell(
+                      child: Text(
+                        "hr@emergiotech.com",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
+                      onTap: () {
+                        _launchUrl("mailto:hr@emergiotech.com");
+                      },
                     ),
                     SizedBox(
                       height: 30,
                     ),
-                    Text(
-                      "+91 88915 16767",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
+                    InkWell(
+                      child: Text(
+                        "+91 88915 16767",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
+                      onTap: () {
+                        _launchUrl("tel:+91 8891516767");
+                      },
                     ),
                     SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      "+91 75940 88816",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
+                    InkWell(
+                      child: Text(
+                        "+91 75940 88816",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
+                      onTap: () {
+                        _launchUrl("tel:+91 7594088816");
+                      },
                     ),
                     SizedBox(
                       height: 30,
@@ -1126,7 +1139,8 @@ class HomeScreen extends StatelessWidget {
                             fontSize: 18,
                             color: Colors.white,
                           )),
-                          onTap: ,
+                      onTap: () =>
+                          _launchUrl('https://www.emergiogames.com/index/'),
                     ),
                     SizedBox(
                       height: 20,
