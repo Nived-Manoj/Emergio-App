@@ -1010,67 +1010,117 @@ class Career extends StatelessWidget {
                     SizedBox(
                       height: 30,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Text(
-                        "Trans Asia Cyber Park, Infopark Phase 2, Infopark Sez, Phase||, Kochi,Kakkanad, Kerala 682303 ",
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, bottom: 40),
+                          child: Image.asset("assett/icons/pin.png",
+                              scale: 25, color: Colors.white),
                         ),
-                      ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 370,
+                          child: Text(
+                            "Trans Asia Cyber Park, Infopark Phase 2, Infopark Sez, Phase||, Kochi,Kakkanad, Kerala 682303 ",
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(
                       height: 30,
                     ),
-                    InkWell(
-                      child: Text(
-                        "hr@emergiotech.com",
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          decorationColor: Colors.white,
-                          fontSize: 18,
-                          color: Colors.white,
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 75),
+                          child: Image.asset("assett/icons/email.png",
+                              scale: 25, color: Colors.white),
                         ),
-                      ),
-                      onTap: () {
-                        _launchUrl("mailto:hr@emergiotech.com");
-                      },
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                          child: Text(
+                            "hr@emergiotech.com",
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.white,
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
+                          ),
+                          onTap: () {
+                            _launchUrl("mailto:hr@emergiotech.com");
+                          },
+                        ),
+                      ],
                     ),
                     SizedBox(
                       height: 30,
                     ),
-                    InkWell(
-                      child: Text(
-                        "+91 88915 16767",
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          decorationColor: Colors.white,
-                          fontSize: 18,
-                          color: Colors.white,
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 90),
+                          child: Image.asset("assett/icons/call.png",
+                              scale: 25, color: Colors.white),
                         ),
-                      ),
-                      onTap: () {
-                        _launchUrl("tel:+91 8891516767");
-                      },
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                          child: Text(
+                            "+91 88915 16767",
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.white,
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
+                          ),
+                          onTap: () {
+                            _launchUrl("tel:+91 8891516767");
+                          },
+                        ),
+                      ],
                     ),
                     SizedBox(
                       height: 20,
                     ),
-                    InkWell(
-                      child: Text(
-                        "+91 75940 88816",
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          decorationColor: Colors.white,
-                          fontSize: 18,
-                          color: Colors.white,
+
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 95),
+                          child: Image.asset("assett/icons/call.png",
+                              scale: 25, color: Colors.white),
                         ),
-                      ),
-                      onTap: () {
-                        _launchUrl("tel:+91 7594088816");
-                      },
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                          child: Text(
+                            "+91 75940 88816",
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.white,
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
+                          ),
+                          onTap: () {
+                            _launchUrl("tel:+91 7594088816");
+                          },
+                        ),
+                      ],
                     ),
+
                     SizedBox(
                       height: 30,
                     ),
