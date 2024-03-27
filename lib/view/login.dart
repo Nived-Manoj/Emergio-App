@@ -49,6 +49,7 @@ class Login extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: TextField(
+                  obscureText: true,
                   //controller: _passcontroller,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),

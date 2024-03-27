@@ -67,27 +67,11 @@ class Syllabus extends StatelessWidget {
               InkWell(
                 child: Text(
                   "UI/UX",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                ),
-                onTap: () {},
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              InkWell(
-                child: Text(
-                  "Graphic Design",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                ),
-                onTap: () {},
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              InkWell(
-                child: Text(
-                  "Human Resource Management ",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.underline,
+                  ),
                 ),
                 onTap: () {},
               ),
@@ -97,7 +81,11 @@ class Syllabus extends StatelessWidget {
               InkWell(
                 child: Text(
                   "Python",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.underline,
+                  ),
                 ),
                 onTap: () {},
               ),
@@ -107,7 +95,11 @@ class Syllabus extends StatelessWidget {
               InkWell(
                 child: Text(
                   "Game Art",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.underline,
+                  ),
                 ),
                 onTap: () {},
               ),
@@ -116,8 +108,12 @@ class Syllabus extends StatelessWidget {
               ),
               InkWell(
                 child: Text(
-                  "Game Development",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  "Graphic Design",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.underline,
+                  ),
                 ),
                 onTap: () {},
               ),
@@ -127,7 +123,39 @@ class Syllabus extends StatelessWidget {
               InkWell(
                 child: Text(
                   "Digital Marketing",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text(
+                  "Game Development",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text(
+                  "Human Resource Management ",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.underline,
+                  ),
                 ),
                 onTap: () {},
               )

@@ -69,6 +69,23 @@ class Contact extends StatelessWidget {
             height: 20,
           ),
           //space for add gmap
+          Container(
+            height: 490,
+            width: 380,
+            color: Colors.black,
+            child: Center(
+              child: Text(
+                "Google map\n we are working on it...",
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
 
           //
           //contact us
@@ -241,6 +258,7 @@ class Contact extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: TextField(
+              maxLines: null,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: "Subject",
@@ -258,6 +276,26 @@ class Contact extends StatelessWidget {
                 labelText: "Message",
               ),
             ),
+          ),
+          SizedBox(height: 10),
+          ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.orange),
+                  fixedSize: MaterialStatePropertyAll(Size(150, 50))),
+              onPressed: () {
+                // Navigator.push(
+                //     context,
+                //     Mat
+                //       builder
+                //     ));
+              },
+              child: Text("Send",
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold))),
+          SizedBox(
+            height: 60,
           ),
 
 //last container
