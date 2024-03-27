@@ -995,6 +995,8 @@ class HomeScreen extends StatelessWidget {
                         child: Text(
                           "Home ",
                           style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.white,
                             fontSize: 18,
                             color: Colors.white,
                           ),
@@ -1011,6 +1013,8 @@ class HomeScreen extends StatelessWidget {
                         child: Text(
                           "Courses ",
                           style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.white,
                             fontSize: 18,
                             color: Colors.white,
                           ),
@@ -1027,6 +1031,8 @@ class HomeScreen extends StatelessWidget {
                         child: Text(
                           "Career ",
                           style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.white,
                             fontSize: 18,
                             color: Colors.white,
                           ),
@@ -1042,6 +1048,8 @@ class HomeScreen extends StatelessWidget {
                         child: Text(
                           "Contact ",
                           style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.white,
                             fontSize: 18,
                             color: Colors.white,
                           ),
@@ -1076,6 +1084,8 @@ class HomeScreen extends StatelessWidget {
                       child: Text(
                         "hr@emergiotech.com",
                         style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.white,
                           fontSize: 18,
                           color: Colors.white,
                         ),
@@ -1091,6 +1101,8 @@ class HomeScreen extends StatelessWidget {
                       child: Text(
                         "+91 88915 16767",
                         style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.white,
                           fontSize: 18,
                           color: Colors.white,
                         ),
@@ -1106,6 +1118,8 @@ class HomeScreen extends StatelessWidget {
                       child: Text(
                         "+91 75940 88816",
                         style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.white,
                           fontSize: 18,
                           color: Colors.white,
                         ),
@@ -1136,6 +1150,8 @@ class HomeScreen extends StatelessWidget {
                     InkWell(
                       child: Text("emergiotech.com",
                           style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.white,
                             fontSize: 18,
                             color: Colors.white,
                           )),
