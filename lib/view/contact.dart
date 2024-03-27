@@ -218,7 +218,47 @@ class Contact extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          TextField(),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: "Name",
+                labelText: "Name",
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: "Email",
+                labelText: "Email",
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: "Subject",
+                labelText: "Subject",
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextField(
+              maxLines: null,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: "Message",
+                labelText: "Message",
+              ),
+            ),
+          ),
 
 //last container
           Container(
