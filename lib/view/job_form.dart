@@ -202,7 +202,7 @@ class JobForm extends StatelessWidget {
             ),
 
             SizedBox(
-              height: 20,
+              height: 30,
             ),
             //last container
             Container(
