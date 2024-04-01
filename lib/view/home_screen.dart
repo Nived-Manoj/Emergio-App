@@ -5,12 +5,19 @@ import 'package:emergio_app/view/courses.dart';
 import 'package:emergio_app/view/login.dart';
 import 'package:emergio_app/view/payments.dart';
 import 'package:emergio_app/view/syllabus.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     Future<void> _launchUrl(String url) async {
@@ -1369,6 +1376,7 @@ class HomeScreen extends StatelessWidget {
               ),
               title: const Text('LogOut'),
               onTap: () {
+                _auth.signOut();
                 Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(

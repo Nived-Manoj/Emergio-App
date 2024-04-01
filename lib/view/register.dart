@@ -1,9 +1,42 @@
 import 'package:emergio_app/view/login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class Register extends StatelessWidget {
+class Register extends StatefulWidget {
   const Register({super.key});
+
+  @override
+  State<Register> createState() => _RegisterState();
+}
+
+class _RegisterState extends State<Register> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+  TextEditingController emailcontroller = TextEditingController();
+  TextEditingController passcontroller = TextEditingController();
+  String _email = "";
+  String _password = "";
+  void handleSignup() async {
+    try {
+      UserCredential userCredential = await _auth
+          .createUserWithEmailAndPassword(email: _email, password: _password);
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content:
+            Text("User ${userCredential.user!.email} Registered Successfully "),
+      ));
+
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Login(),
+          ));
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: const Text("Error while registering"),
+      ));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,28 +67,57 @@ class Register extends StatelessWidget {
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      hintText: "Email",
-                      labelText: "Email",
-                    ),
-                  ),
-                ),
-                SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      hintText: "Password",
-                      labelText: "Password",
-                    ),
-                  ),
-                ),
+                Form(
+                    key: _formkey,
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            keyboardType: TextInputType.emailAddress,
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: "Email",
+                              labelText: "Email",
+                            ),
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return "Please Enter a valid email address";
+                              }
+                              return null;
+                            },
+                            onChanged: (value) {
+                              setState(() {
+                                _email = value;
+                              });
+                            },
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: "Password",
+                              labelText: "Password",
+                            ),
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return "Please Enter password";
+                              }
+                              return null;
+                            },
+                            onChanged: (value) {
+                              setState(() {
+                                _password = value;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    )),
                 SizedBox(height: 10),
                 ElevatedButton(
                     style: ButtonStyle(
@@ -63,11 +125,14 @@ class Register extends StatelessWidget {
                             MaterialStatePropertyAll(Colors.orange),
                         fixedSize: MaterialStatePropertyAll(Size(180, 50))),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Login(),
-                          ));
+                      if (_formkey.currentState!.validate()) {
+                        handleSignup();
+                      }
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => Login(),
+                      //     ));
                     },
                     child: Text("Register",
                         style: TextStyle(

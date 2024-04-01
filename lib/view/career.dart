@@ -5,11 +5,13 @@ import 'package:emergio_app/view/job_form.dart';
 import 'package:emergio_app/view/login.dart';
 import 'package:emergio_app/view/payments.dart';
 import 'package:emergio_app/view/syllabus.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Career extends StatelessWidget {
-  const Career({super.key});
+  Career({super.key});
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -1407,6 +1409,7 @@ class Career extends StatelessWidget {
               ),
               title: const Text('LogOut'),
               onTap: () {
+                _auth.signOut();
                 Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(

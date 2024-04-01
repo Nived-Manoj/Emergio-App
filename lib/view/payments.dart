@@ -4,10 +4,12 @@ import 'package:emergio_app/view/courses.dart';
 import 'package:emergio_app/view/home_screen.dart';
 import 'package:emergio_app/view/login.dart';
 import 'package:emergio_app/view/syllabus.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class Payments extends StatelessWidget {
-  const Payments({super.key});
+  Payments({super.key});
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -154,6 +156,7 @@ class Payments extends StatelessWidget {
               ),
               title: const Text('LogOut'),
               onTap: () {
+                _auth.signOut();
                 Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
