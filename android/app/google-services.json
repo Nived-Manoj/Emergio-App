@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "701544939176",
+    "project_id": "emergio-2f3ae",
+    "storage_bucket": "emergio-2f3ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701544939176:android:9f0207aef1f0539cfb8c9d",
+        "android_client_info": {
+          "package_name": "com.example.emergio_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUU1J7kz5Bl_CQ3X7vkwYDpqpmPRIZX9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

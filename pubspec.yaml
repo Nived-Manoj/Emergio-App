@@ -39,6 +39,8 @@ dependencies:
   flutter_onboarding_slider: ^1.0.11
   url_launcher: ^6.2.5
   carousel_slider: ^4.2.1
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.17.8
 
 dev_dependencies:
   flutter_test:
