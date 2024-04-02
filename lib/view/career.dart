@@ -645,7 +645,6 @@ class Career extends StatelessWidget {
               height: 20,
             ),
             //listview\
-            //
 
             Row(children: [
               Padding(
