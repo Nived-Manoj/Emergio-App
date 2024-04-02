@@ -797,7 +797,7 @@ class Courses extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
+            DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.black87,
               ),
@@ -805,6 +805,8 @@ class Courses extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CircleAvatar(
+                    backgroundColor: Colors.black26,
+                    child: Image.asset("assett/icons/logo.png"),
                     radius: 50,
                   ),
                   Text(

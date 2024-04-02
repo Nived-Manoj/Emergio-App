@@ -13,6 +13,7 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+  //TextEditingController namecontroller = TextEditingController();
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passcontroller = TextEditingController();
   String _email = "";
@@ -71,6 +72,17 @@ class _RegisterState extends State<Register> {
                     key: _formkey,
                     child: Column(
                       children: [
+                        // Padding(
+                        //   padding: const EdgeInsets.all(8.0),
+                        //   child: TextField(
+                        //     controller: namecontroller,
+                        //     decoration: InputDecoration(
+                        //       border: OutlineInputBorder(),
+                        //       hintText: "Username",
+                        //       labelText: "Username",
+                        //     ),
+                        //   ),
+                        // ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: TextFormField(
