@@ -15,6 +15,47 @@ class Career extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List courses = [
+      "Game Development",
+      "Digital Marketing",
+      "Human Resource Management",
+      "UI/UX",
+      "Python",
+      "Game Artist"
+    ];
+    List avatar = [
+      AssetImage("assett/images/benin.jpg"),
+      AssetImage("assett/images/basith.jpg"),
+      AssetImage(
+        "assett/images/nisha.jpg",
+      ),
+      AssetImage(
+        "assett/images/greeshma.jpg",
+      ),
+      AssetImage(
+        "assett/images/nayana.jpg",
+      ),
+      AssetImage(
+        "assett/images/vishnu.png",
+      ),
+    ];
+    List tutors = [
+      "Benin P John",
+      "Abdul Basith",
+      "Nisha Chandran",
+      "Greeshma M",
+      "Nayana Mohan",
+      "Vishnu MP"
+    ];
+    List description = [
+      "Our game development tutors are industry veterans, passionate about gaming and equipped with vast experience. They provide personalized guidance, empowering you to master game creation from coding to design.",
+      "Our digital marketing tutors are industry experts immersed in the dynamic digital realm. They offer tailored guidance in social media, SEO, content creation, and analytics, empowering you for success.",
+      "Our HRM tutors are seasoned professionals with expertise in recruitment, training, and compliance. They mentor and prepare you for effective people management within organizations.",
+      "Our UI/UX tutors are industry experts in crafting user-friendly digital experiences. They guide you through design principles and cutting-edge tools, empowering you to create intuitive interfaces",
+      "Our Python tutors are coding experts, diving into its versatility for web, data, AI, and automation. They provide hands-on training for mastering this powerful language.",
+      "Our game art tutors are visual storytelling experts. They guide you in character design, environments, and animation, empowering you to craft captivating game visuals.",
+    ];
+
     Future<void> _launchUrl(String url) async {
       final Uri uri = Uri.parse(url);
 
@@ -644,301 +685,49 @@ class Career extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            //listview\
 
-            Row(children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10, bottom: 90),
-                child: CircleAvatar(
-                  foregroundImage: AssetImage("assett/images/benin.jpg"),
-                  radius: 50,
-                ),
-              ),
-              Container(
-                width: 293,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 150),
-                      child: Text(
-                        "Benin P John",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 22,
-                            color: Colors.deepOrangeAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 120),
-                      child: Text(
-                        "Game Development",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                            color: Colors.pinkAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        "Our game development tutors are industry veterans, passionate about gaming and equipped with vast experience. They provide personalized guidance, empowering you to master game creation from coding to design.",
-                        style: TextStyle(
-                          fontSize: 15,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ]),
+            ///ListView
+
             SizedBox(
-              height: 30,
-            ),
-            Row(children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10, bottom: 60),
-                child: CircleAvatar(
-                  foregroundImage: AssetImage("assett/images/basith.jpg"),
-                  radius: 50,
-                ),
-              ),
-              Container(
-                width: 293,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 150),
-                      child: Text(
-                        "Abdul Basith",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 22,
-                            color: Colors.deepOrangeAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 130),
-                      child: Text(
-                        "Digital Marketing",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                            color: Colors.pinkAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        "Our digital marketing tutors are industry experts immersed in the dynamic digital realm. They offer tailored guidance in social media, SEO, content creation, and analytics, empowering you for success.",
-                        style: TextStyle(
-                          fontSize: 15,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ]),
-            SizedBox(
-              height: 30,
-            ),
-            Row(children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10, bottom: 80),
-                child: CircleAvatar(
-                  foregroundImage: AssetImage(
-                    "assett/images/nisha.jpg",
+              height: 1110,
+              child: ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: courses.length,
+                itemBuilder: (BuildContext context, int index) => ListTile(
+                  leading: CircleAvatar(
+                    radius: 30,
+                    foregroundImage: avatar[index],
                   ),
-                  radius: 50,
-                ),
-              ),
-              Container(
-                width: 293,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 110),
-                      child: Text(
-                        "Nisha Chandran",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 22,
-                            color: Colors.deepOrangeAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 20),
-                      child: Text(
-                        "Human Resource Management",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                            color: Colors.pinkAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        "Our HRM tutors are seasoned professionals with expertise in recruitment, training, and compliance. They mentor and prepare you for effective people management within organizations.",
-                        style: TextStyle(
-                          fontSize: 15,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ]),
-            SizedBox(
-              height: 30,
-            ),
-            Row(children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10, bottom: 80),
-                child: CircleAvatar(
-                  foregroundImage: AssetImage(
-                    "assett/images/greeshma.jpg",
+                  title: Text(
+                    tutors[index],
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 22,
+                        color: Colors.deepOrangeAccent[200]),
                   ),
-                  radius: 50,
-                ),
-              ),
-              Container(
-                width: 293,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 140),
-                      child: Text(
-                        "Greeshma M",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 22,
-                            color: Colors.deepOrangeAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 220),
-                      child: Text(
-                        "UI/UX",
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        courses[index],
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 18,
                             color: Colors.pinkAccent[200]),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        "Our UI/UX tutors are industry experts in crafting user-friendly digital experiences. They guide you through design principles and cutting-edge tools, empowering you to create intuitive interfaces",
+                      Text(
+                        description[index],
                         style: TextStyle(
                           fontSize: 15,
                         ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ]),
-            SizedBox(
-              height: 30,
-            ),
-            Row(children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10, bottom: 80),
-                child: CircleAvatar(
-                  foregroundImage: AssetImage(
-                    "assett/images/nayana.jpg",
+                      )
+                    ],
                   ),
-                  radius: 50,
                 ),
               ),
-              Container(
-                width: 293,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 120),
-                      child: Text(
-                        "Nayana Mohan",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 22,
-                            color: Colors.deepOrangeAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 210),
-                      child: Text(
-                        "Python",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                            color: Colors.pinkAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        "Our Python tutors are coding experts, diving into its versatility for web, data, AI, and automation. They provide hands-on training for mastering this powerful language.",
-                        style: TextStyle(
-                          fontSize: 15,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ]),
-            SizedBox(
-              height: 30,
             ),
-            Row(children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10, bottom: 80),
-                child: CircleAvatar(
-                  foregroundImage: AssetImage(
-                    "assett/images/vishnu.png",
-                  ),
-                  radius: 50,
-                ),
-              ),
-              Container(
-                width: 293,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 160),
-                      child: Text(
-                        "Vishnu M P",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 22,
-                            color: Colors.deepOrangeAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 175),
-                      child: Text(
-                        "Game Artist",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                            color: Colors.pinkAccent[200]),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        "Our game art tutors are visual storytelling experts. They guide you in character design, environments, and animation, empowering you to craft captivating game visuals.",
-                        style: TextStyle(
-                          fontSize: 15,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ]),
+
             SizedBox(
               height: 30,
             ),
