@@ -8,8 +8,14 @@ import 'package:emergio_app/view/payments.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class Syllabus extends StatelessWidget {
+class Syllabus extends StatefulWidget {
   Syllabus({super.key});
+
+  @override
+  State<Syllabus> createState() => _SyllabusState();
+}
+
+class _SyllabusState extends State<Syllabus> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override

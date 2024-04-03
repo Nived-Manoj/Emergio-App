@@ -10,7 +10,8 @@ Future<void> main() async {
           apiKey: "AIzaSyAUU1J7kz5Bl_CQ3X7vkwYDpqpmPRIZX9U",
           appId: "1:701544939176:android:9f0207aef1f0539cfb8c9d",
           messagingSenderId: "",
-          projectId: "emergio-2f3ae"));
+          projectId: "emergio-2f3ae",
+          storageBucket: "emergio-2f3ae.appspot.com"));
 
   runApp(const MyApp());
 }

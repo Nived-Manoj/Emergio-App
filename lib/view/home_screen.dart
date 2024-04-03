@@ -1,10 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:emergio_app/view/career.dart';
+import 'package:emergio_app/view/cc.dart';
 import 'package:emergio_app/view/contact.dart';
 import 'package:emergio_app/view/courses.dart';
+import 'package:emergio_app/view/dd.dart';
 import 'package:emergio_app/view/login.dart';
 import 'package:emergio_app/view/payments.dart';
-import 'package:emergio_app/view/syllabus.dart';
+//import 'package:emergio_app/view/syllabus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -1342,7 +1344,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Syllabus(),
+                      builder: (context) => cc(),
                     ));
               },
             ),
