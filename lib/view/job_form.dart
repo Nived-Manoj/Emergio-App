@@ -9,9 +9,25 @@ import 'package:emergio_app/view/login.dart';
 import 'package:emergio_app/view/payments.dart';
 import 'package:emergio_app/view/syllabus.dart';
 
-class JobForm extends StatelessWidget {
+class JobForm extends StatefulWidget {
   const JobForm({super.key});
 
+  @override
+  State<JobForm> createState() => _JobFormState();
+}
+
+class _JobFormState extends State<JobForm> {
+  List<String> _category = [
+    'UI/UX Developer ',
+    'Python',
+    'Social Media Manager',
+    'Graphic Designer',
+    "Hr Executive",
+    "SEO Specialist",
+    "Unity Game Developer",
+    "Game Artist",
+  ];
+  String? _selectedValue;
   @override
   Widget build(BuildContext context) {
     Future<void> _launchUrl(String url) async {
@@ -61,6 +77,7 @@ class JobForm extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 20),
                       child: TextField(
+                        keyboardType: TextInputType.name,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: "Name",
@@ -83,10 +100,11 @@ class JobForm extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 20),
                       child: TextField(
+                        keyboardType: TextInputType.phone,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          hintText: "Contact",
-                          labelText: "Contact",
+                          hintText: "Contact Number",
+                          labelText: "Phone",
                         ),
                       ),
                     ),
@@ -105,6 +123,7 @@ class JobForm extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 20),
                       child: TextField(
+                        keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: "Email",
@@ -125,13 +144,35 @@ class JobForm extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 20),
-                      child: TextField(
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: "Position",
-                          labelText: "Position",
+                          vertical: 8, horizontal: 20),
+                      child: Container(
+                        height: 65,
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: DropdownButton(
+                                hint: Text('Choose the position'),
+                                value: _selectedValue,
+                                onChanged: (newValue) {
+                                  setState(() {
+                                    _selectedValue = newValue;
+                                  });
+                                },
+                                items: _category.map((Category) {
+                                  return DropdownMenuItem(
+                                    child: new Text(Category),
+                                    value: Category,
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                          ],
+                        ),
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.zero,
+                          color: Colors.white,
                         ),
                       ),
                     ),

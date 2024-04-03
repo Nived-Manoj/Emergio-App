@@ -3,6 +3,8 @@ import 'package:emergio_app/view/courses.dart';
 import 'package:emergio_app/view/home_screen.dart';
 import 'package:emergio_app/view/job_form.dart';
 import 'package:emergio_app/view/login.dart';
+import 'package:emergio_app/view/login_error.dart';
+
 import 'package:emergio_app/view/payments.dart';
 import 'package:emergio_app/view/syllabus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -116,6 +118,7 @@ class Career extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -144,11 +147,19 @@ class Career extends StatelessWidget {
                               )),
                             ),
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => JobForm(),
-                                  ));
+                              if (FirebaseAuth.instance.currentUser != null) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => JobForm(),
+                                    ));
+                              } else {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginAgain(),
+                                    ));
+                              }
                             },
                           )
                         ]),
@@ -212,11 +223,19 @@ class Career extends StatelessWidget {
                               )),
                             ),
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => JobForm(),
-                                  ));
+                              if (FirebaseAuth.instance.currentUser != null) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => JobForm(),
+                                    ));
+                              } else {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginAgain(),
+                                    ));
+                              }
                             },
                           )
                         ]),
@@ -280,11 +299,19 @@ class Career extends StatelessWidget {
                               )),
                             ),
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => JobForm(),
-                                  ));
+                              if (FirebaseAuth.instance.currentUser != null) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => JobForm(),
+                                    ));
+                              } else {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginAgain(),
+                                    ));
+                              }
                             },
                           )
                         ]),
@@ -348,11 +375,19 @@ class Career extends StatelessWidget {
                               )),
                             ),
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => JobForm(),
-                                  ));
+                              if (FirebaseAuth.instance.currentUser != null) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => JobForm(),
+                                    ));
+                              } else {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginAgain(),
+                                    ));
+                              }
                             },
                           )
                         ]),
@@ -416,11 +451,19 @@ class Career extends StatelessWidget {
                               )),
                             ),
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => JobForm(),
-                                  ));
+                              if (FirebaseAuth.instance.currentUser != null) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => JobForm(),
+                                    ));
+                              } else {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginAgain(),
+                                    ));
+                              }
                             },
                           )
                         ]),
@@ -484,11 +527,19 @@ class Career extends StatelessWidget {
                               )),
                             ),
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => JobForm(),
-                                  ));
+                              if (FirebaseAuth.instance.currentUser != null) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => JobForm(),
+                                    ));
+                              } else {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginAgain(),
+                                    ));
+                              }
                             },
                           )
                         ]),
@@ -552,11 +603,19 @@ class Career extends StatelessWidget {
                               )),
                             ),
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => JobForm(),
-                                  ));
+                              if (FirebaseAuth.instance.currentUser != null) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => JobForm(),
+                                    ));
+                              } else {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginAgain(),
+                                    ));
+                              }
                             },
                           )
                         ]),
@@ -620,11 +679,19 @@ class Career extends StatelessWidget {
                               )),
                             ),
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => JobForm(),
-                                  ));
+                              if (FirebaseAuth.instance.currentUser != null) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => JobForm(),
+                                    ));
+                              } else {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginAgain(),
+                                    ));
+                              }
                             },
                           )
                         ]),
