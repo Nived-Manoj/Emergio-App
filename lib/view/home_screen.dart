@@ -3,6 +3,7 @@ import 'package:emergio_app/view/career.dart';
 import 'package:emergio_app/view/contact.dart';
 import 'package:emergio_app/view/courses.dart';
 import 'package:emergio_app/view/login.dart';
+import 'package:emergio_app/view/map.dart';
 
 import 'package:emergio_app/view/payments.dart';
 import 'package:emergio_app/view/syllabus.dart';
@@ -1310,7 +1311,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Courses(),
+                      builder: (context) => HomePage(),
                     ));
               },
             ),

@@ -96,12 +96,12 @@ class _ContactState extends State<Contact> {
           InkWell(
             child: Container(
               height: 490,
-              width: 380,
-              color: Colors.black,
+              width: 370,
+              decoration: BoxDecoration(border: Border.all()),
               child: Center(
                 child: Image.asset(
-                  "assett/images/map.png",
-                  // fit: BoxFit.none,
+                  "assett/images/map3.png",
+                  fit: BoxFit.fitHeight,
                 ),
               ),
             ),
@@ -307,11 +307,10 @@ class _ContactState extends State<Contact> {
                   backgroundColor: MaterialStatePropertyAll(Colors.orange),
                   fixedSize: MaterialStatePropertyAll(Size(150, 50))),
               onPressed: () {
-                // Navigator.push(
-                //     context,
-                //     Mat
-                //       builder
-                //     ));
+                // ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                //   content: Text("Feedback sent Successfully "),
+                // ));
+                print("send successfully");
               },
               child: Text("Send",
                   style: TextStyle(

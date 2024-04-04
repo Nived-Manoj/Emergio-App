@@ -1,52 +1,113 @@
 import 'package:flutter/material.dart';
-import 'package:map_launcher/map_launcher.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
+class HomePage extends StatefulWidget {
+  HomePageState createState() => HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  void showMap() async {
-    final availableMaps = await MapLauncher.installedMaps;
-    availableMaps.forEach((element) {
-      print(element.icon);
-      print(element.mapName);
-      print(element.mapType);
-    });
-    await availableMaps.first.showMarker(
-      coords: Coords(10.000604086449982, 76.34951010007384),
-      title: "Emergio Games Pvt Ltd",
-      description: "gaming",
-    );
-    print(availableMaps);
+class HomePageState extends State<HomePage> {
+  List persons = [];
+  List original = [];
+  TextEditingController txtQuery = new TextEditingController();
+
+  void loadData() async {
+    String jsonStr = await rootBundle.loadString('assets/persons.json');
+    var json = jsonDecode(jsonStr);
+    persons = json;
+    original = json;
     setState(() {});
+  }
+
+  void search(String query) {
+    if (query.isEmpty) {
+      persons = original;
+      setState(() {});
+      return;
+    }
+
+    query = query.toLowerCase();
+    print(query);
+    List result = [];
+    persons.forEach((p) {
+      var name = p["name"].toString().toLowerCase();
+      if (name.contains(query)) {
+        result.add(p);
+      }
+    });
+
+    persons = result;
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    loadData();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("Flutter Tutorial"),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: showMap,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      body: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.all(10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("List view search",
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  SizedBox(height: 10),
+                  TextFormField(
+                    controller: txtQuery,
+                    onChanged: search,
+                    decoration: InputDecoration(
+                      hintText: "Search",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0)),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black)),
+                      prefixIcon: Icon(Icons.search),
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.clear),
+                        onPressed: () {
+                          txtQuery.text = '';
+                          search(txtQuery.text);
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            _listView(persons)
+          ]),
     );
   }
+}
+
+Widget _listView(persons) {
+  return Expanded(
+    child: ListView.builder(
+        itemCount: persons.length,
+        itemBuilder: (context, index) {
+          var person = persons[index];
+          return ListTile(
+            leading: CircleAvatar(
+              child: Text(person['name'][0]),
+            ),
+            title: Text(person['name']),
+            subtitle: Text("City: " + person['city']),
+          );
+        }),
+  );
 }
