@@ -71,17 +71,19 @@ class Contact extends StatelessWidget {
             height: 20,
           ),
           //space for add gmap
-          Container(
-            height: 490,
-            width: 380,
-            color: Colors.black,
-            child: Center(
-              child: Text(
-                "Google map\n we are working on it...",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+          InkWell(
+            child: Container(
+              height: 490,
+              width: 380,
+              color: Colors.black,
+              child: Center(
+                child: Text(
+                  "Google map\n we are working on it...",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
               ),
             ),
           ),
