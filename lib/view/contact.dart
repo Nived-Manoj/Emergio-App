@@ -99,13 +99,7 @@ class _ContactState extends State<Contact> {
               width: 380,
               color: Colors.black,
               child: Center(
-                child: Text(
-                  "Google map\n we are working on it...",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
+                child: ,
               ),
             ),
             onTap: showMap,
