@@ -99,7 +99,10 @@ class _ContactState extends State<Contact> {
               width: 380,
               color: Colors.black,
               child: Center(
-                child: ,
+                child: Image.asset(
+                  "assett/images/map.png",
+                  // fit: BoxFit.none,
+                ),
               ),
             ),
             onTap: showMap,
