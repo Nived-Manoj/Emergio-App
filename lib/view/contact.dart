@@ -6,11 +6,33 @@ import 'package:emergio_app/view/payments.dart';
 import 'package:emergio_app/view/syllabus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:map_launcher/map_launcher.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Contact extends StatelessWidget {
+class Contact extends StatefulWidget {
   Contact({super.key});
+
+  @override
+  State<Contact> createState() => _ContactState();
+}
+
+class _ContactState extends State<Contact> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  void showMap() async {
+    final availableMaps = await MapLauncher.installedMaps;
+    availableMaps.forEach((element) {
+      print(element.icon);
+      print(element.mapName);
+      print(element.mapType);
+    });
+    await availableMaps.first.showMarker(
+      coords: Coords(10.000604086449982, 76.34951010007384),
+      title: "Emergio Games Pvt Ltd",
+      description: "gaming",
+    );
+    print(availableMaps);
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -86,6 +108,7 @@ class Contact extends StatelessWidget {
                 ),
               ),
             ),
+            onTap: showMap,
           ),
           SizedBox(
             height: 20,
