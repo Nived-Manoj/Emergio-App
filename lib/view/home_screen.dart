@@ -3,13 +3,10 @@ import 'package:emergio_app/view/career.dart';
 import 'package:emergio_app/view/contact.dart';
 import 'package:emergio_app/view/courses.dart';
 import 'package:emergio_app/view/login.dart';
-import 'package:emergio_app/view/map.dart';
 import 'package:emergio_app/view/payments.dart';
-import 'package:emergio_app/view/pick.dart';
 import 'package:emergio_app/view/syllabus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import 'package:quickalert/quickalert.dart';
 import 'package:quickalert/utils/images.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -1314,7 +1311,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Search(),
+                      builder: (context) => Courses(),
                     ));
               },
             ),
@@ -1325,7 +1322,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => FilesPick(),
+                      builder: (context) => Career(),
                     ));
               },
             ),

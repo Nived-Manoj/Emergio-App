@@ -8,10 +8,11 @@ import 'package:emergio_app/view/payments.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:quickalert/quickalert.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:quickalert/utils/images.dart';
 
 class Syllabus extends StatefulWidget {
-  Syllabus({super.key});
+  const Syllabus({super.key});
 
   @override
   State<Syllabus> createState() => _SyllabusState();
@@ -22,6 +23,14 @@ class _SyllabusState extends State<Syllabus> {
 
   @override
   Widget build(BuildContext context) {
+    Future<void> _launchUrl(String url) async {
+      final Uri uri = Uri.parse(url);
+
+      if (!await launchUrl(uri)) {
+        throw 'Could not launch $uri';
+      }
+    }
+
     if (FirebaseAuth.instance.currentUser != null) {
       return Scaffold(
         backgroundColor: Colors.grey[300],
@@ -155,7 +164,8 @@ class _SyllabusState extends State<Syllabus> {
                       decoration: TextDecoration.underline,
                     ),
                   ),
-                  onTap: () {},
+                  onTap: () => _launchUrl(
+                      ' https://firebasestorage.googleapis.com/v0/b/emergio-2f3ae.appspot.com/o/files%2FG_Art.pdf?alt=media&token=a793ee18-7485-43f6-8e3d-44f89168bb7c'),
                 ),
                 SizedBox(
                   height: 20,

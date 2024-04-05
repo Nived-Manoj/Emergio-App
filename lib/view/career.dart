@@ -730,20 +730,20 @@ class Career extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            //search
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                    hintText: "search",
-                    suffixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20))),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
+            // //search
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   child: TextField(
+            //     decoration: InputDecoration(
+            //         hintText: "search",
+            //         suffixIcon: Icon(Icons.search),
+            //         border: OutlineInputBorder(
+            //             borderRadius: BorderRadius.circular(20))),
+            //   ),
+            // ),
+            // SizedBox(
+            //   height: 10,
+            // ),
 
             Padding(
               padding: const EdgeInsets.only(right: 260),

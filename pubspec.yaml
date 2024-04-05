@@ -48,6 +48,7 @@ dependencies:
   searchable_listview: ^2.11.1
   quickalert: ^1.1.0
   top_snackbar_flutter: ^3.1.0
+  dio: ^5.4.2+1
   
 
 dev_dependencies:
