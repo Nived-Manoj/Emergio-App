@@ -1,4 +1,5 @@
 import 'package:emergio_app/view/career.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:emergio_app/view/contact.dart';
@@ -197,12 +198,9 @@ class _JobFormState extends State<JobForm> {
                                   Colors.greenAccent[700]),
                               fixedSize:
                                   MaterialStatePropertyAll(Size(180, 50))),
-                          onPressed: () {
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //       builder: (context) => ,
-                            //     ));
+                          onPressed: () async {
+                            final result =
+                                await FilePicker.platform.pickFiles();
                           },
                           child: Text("Upload Resume",
                               style: TextStyle(

@@ -6,6 +6,8 @@ import 'package:emergio_app/view/login.dart';
 import 'package:emergio_app/view/syllabus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:quickalert/quickalert.dart';
+import 'package:quickalert/utils/images.dart';
 
 class Payments extends StatelessWidget {
   Payments({super.key});
@@ -158,13 +160,39 @@ class Payments extends StatelessWidget {
               ),
               title: const Text('LogOut'),
               onTap: () {
-                _auth.signOut();
-                Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Login(),
+                QuickAlert.show(
+                  onCancelBtnTap: () {
+                    Navigator.pop(context);
+                  },
+                  onConfirmBtnTap: () {
+                    _auth.signOut();
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Login(),
+                      ),
+                      (Route route) => false,
+                    );
+                  },
+                  context: context,
+                  type: QuickAlertType.confirm,
+                  text: 'Do you want to logout',
+                  titleAlignment: TextAlign.center,
+                  textAlignment: TextAlign.center,
+                  confirmBtnText: 'Yes',
+                  cancelBtnText: 'No',
+                  confirmBtnColor: Colors.white,
+                  backgroundColor: Colors.black,
+                  headerBackgroundColor: Colors.grey,
+                  confirmBtnTextStyle: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
                   ),
-                  (Route route) => false,
+                  customAsset: AppAnim.info,
+                  animType: QuickAlertAnimType.rotate,
+                  barrierColor: Colors.blueGrey,
+                  titleColor: Colors.white,
+                  textColor: Colors.white,
                 );
               },
             ),

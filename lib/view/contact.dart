@@ -7,6 +7,10 @@ import 'package:emergio_app/view/syllabus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:map_launcher/map_launcher.dart';
+import 'package:quickalert/models/quickalert_animtype.dart';
+import 'package:quickalert/models/quickalert_type.dart';
+import 'package:quickalert/utils/images.dart';
+import 'package:quickalert/widgets/quickalert_dialog.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Contact extends StatefulWidget {
@@ -307,10 +311,13 @@ class _ContactState extends State<Contact> {
                   backgroundColor: MaterialStatePropertyAll(Colors.orange),
                   fixedSize: MaterialStatePropertyAll(Size(150, 50))),
               onPressed: () {
-                // ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                //   content: Text("Feedback sent Successfully "),
-                // ));
-                print("send successfully");
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.success,
+                  text: 'Feedback send Successfully!',
+                  autoCloseDuration: const Duration(seconds: 2),
+                  showConfirmBtn: false,
+                );
               },
               child: Text("Send",
                   style: TextStyle(
@@ -785,13 +792,39 @@ class _ContactState extends State<Contact> {
               ),
               title: const Text('LogOut'),
               onTap: () {
-                _auth.signOut();
-                Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Login(),
+                QuickAlert.show(
+                  onCancelBtnTap: () {
+                    Navigator.pop(context);
+                  },
+                  onConfirmBtnTap: () {
+                    _auth.signOut();
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Login(),
+                      ),
+                      (Route route) => false,
+                    );
+                  },
+                  context: context,
+                  type: QuickAlertType.confirm,
+                  text: 'Do you want to logout',
+                  titleAlignment: TextAlign.center,
+                  textAlignment: TextAlign.center,
+                  confirmBtnText: 'Yes',
+                  cancelBtnText: 'No',
+                  confirmBtnColor: Colors.white,
+                  backgroundColor: Colors.black,
+                  headerBackgroundColor: Colors.grey,
+                  confirmBtnTextStyle: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
                   ),
-                  (Route route) => false,
+                  customAsset: AppAnim.info,
+                  animType: QuickAlertAnimType.rotate,
+                  barrierColor: Colors.blueGrey,
+                  titleColor: Colors.white,
+                  textColor: Colors.white,
                 );
               },
             ),

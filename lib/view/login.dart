@@ -3,6 +3,8 @@ import 'package:emergio_app/view/register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:top_snackbar_flutter/custom_snack_bar.dart';
+import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -23,9 +25,14 @@ class _LoginState extends State<Login> {
       UserCredential userCredential = await _auth.signInWithEmailAndPassword(
           email: _email, password: _password);
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content:
-            Text("User ${userCredential.user!.email} Logged in Successfully "),
+        content: Text("User : ${userCredential.user!.email}"),
       ));
+      showTopSnackBar(
+        Overlay.of(context),
+        const CustomSnackBar.success(
+          message: ("User Logged in Successfully "),
+        ),
+      );
 
       Navigator.push(
           context,
@@ -33,9 +40,13 @@ class _LoginState extends State<Login> {
             builder: (context) => HomeScreen(),
           ));
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text("Error while logging in"),
-      ));
+      showTopSnackBar(
+        Overlay.of(context),
+        const CustomSnackBar.error(
+          message:
+              'Something went wrong. Please check your credentials and try again',
+        ),
+      );
     }
   }
 
