@@ -50,7 +50,7 @@ class _ContactState extends State<Contact> {
 
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: true,
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.black,
         title: Row(
           children: [
