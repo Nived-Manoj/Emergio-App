@@ -51,7 +51,7 @@ class _ContactState extends State<Contact> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         title: Row(
           children: [
             InkWell(
