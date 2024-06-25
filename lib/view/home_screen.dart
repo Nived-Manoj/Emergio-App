@@ -604,7 +604,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     radius: 30,
                     backgroundColor: Colors.orangeAccent[400],
                     child: Text(
-                      "10.9",
+                      "8.9",
                       style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                   ),
